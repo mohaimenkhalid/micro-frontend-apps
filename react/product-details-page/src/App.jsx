@@ -1,5 +1,5 @@
 import React, {Suspense} from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client';
 //Asynchronous loading component
 const Header = React.lazy(() => import("home/Header"));
 import Footer from "home/Footer";
@@ -16,4 +16,9 @@ const App = () => (
         <Footer />
     </div>
 );
-ReactDOM.render(<App />, document.getElementById("app"));
+
+const container = document.getElementById('app');
+const root = createRoot(container); // createRoot(container!) if you use TypeScript
+root.render(<App />);
+
+// ReactDOM.render(<App />, document.getElementById("app"));
