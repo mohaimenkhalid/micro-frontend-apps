@@ -8,7 +8,7 @@ export class ProductsController {
 
   @Get()
   async index(): Promise<Product[]> {
-    return  ;
+    return  products;
   }
 
   @Get(':id')
