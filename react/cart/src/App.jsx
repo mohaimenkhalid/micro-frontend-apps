@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter } from 'react-router-dom'
 import Header from "home/Header";
 import Footer from "home/Footer";
 import "./index.scss";
@@ -16,4 +17,4 @@ const App = () => (
 );
 const container = document.getElementById('app');
 const root = createRoot(container); // createRoot(container!) if you use TypeScript
-root.render(<App />);
+root.render(<BrowserRouter><App /> </BrowserRouter>,);

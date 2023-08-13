@@ -4,6 +4,8 @@ import "./index.scss"
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HomeContent from "./components/HomeContent";
+import { BrowserRouter } from 'react-router-dom'
+
 const App = () => (
   <div className="mx-auto max-w-6xl">
     <Header title="Header from Home page" />
@@ -15,6 +17,6 @@ const App = () => (
 );
 const container = document.getElementById('app');
 const root = createRoot(container); // createRoot(container!) if you use TypeScript
-root.render(<App />);
+root.render(<BrowserRouter><App /> </BrowserRouter>,);
 
 // ReactDOM.render(<App />, document.getElementById("app"));
