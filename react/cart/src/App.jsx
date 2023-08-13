@@ -1,9 +1,9 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import Header from "home/Header";
 import Footer from "home/Footer";
 import "./index.scss";
 import CartContent from "./components/CartContent";
+import {createRoot} from "react-dom/client";
 
 const App = () => (
     <div className="mx-auto max-w-6xl">
@@ -14,4 +14,6 @@ const App = () => (
         <Footer />
     </div>
 );
-ReactDOM.render(<App />, document.getElementById("app"));
+const container = document.getElementById('app');
+const root = createRoot(container); // createRoot(container!) if you use TypeScript
+root.render(<App />);
