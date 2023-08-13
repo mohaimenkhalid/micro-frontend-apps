@@ -18,9 +18,6 @@ export default function CartContent() {
 
     return (
         <>
-
-            <Login />
-            <MiniCart />
             <div className="my-10 grid grid-cols-4 gap-5">
                 {items.map((item) => (
                     <React.Fragment key={item.id}>
